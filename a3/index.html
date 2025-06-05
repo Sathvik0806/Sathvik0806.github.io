@@ -5,32 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
-        function calc() {
-            let a=Number(t1.value)
-            let b=Number(t2.value)
-            const addition=a+"+"+b+"="+(a+b);
-            const subtraction=a+"-"+b+"="+(a-b);
-            const multiplication=a+"*"+b+"="+(a*b);
-            const division = b!=0 ? (a+"/"+b+"="+(a/b)): "Error Division by Zero is not allowed";
-            //dvResult.innerHTML = a+b;
-            document.getElementById("results").innerHTML=
-            "<p>"+addition+"</p>"+
-            "<p>"+subtraction+"</p>"+
-            "<p>"+multiplication+"</p>"+
-            "<p>"+division+"</p>";
+        function addnumbers(){
+            var a=Number(num1.value);
+            var b=Number(num2.value);
+            var sum=a+b;
+            alert("Sum =" +sum);
+            
         }
     </script>
 </head>
 <body>
-
+    <h1>Addition of Two numbers</h1>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button onclick="addnumbers()" style="background-color: aquamarine;">Add</button>
     <hr>
-    <input type="text" id="t1">
-    <input type="text" id="t2">
-    <button onclick = "calc()" style="background-color: blueviolet;">Submit</button>
-    <hr>
-    <div id="results"></div>
-
-
+    
 </body>
 </html>
