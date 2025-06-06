@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fruit List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 30px;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fruit List</h1>
+
+  <input type="text" id="fruitInput" placeholder="Enter fruit name" />
+  <button onclick="addFruit()">Add</button>
+
+  <ul id="fruitList">
+    
+  </ul>
+
+  <script>
+    const fruits = [];
+
+    function addFruit() {
+      const input = document.getElementById("fruitInput");
+      const fruitName = input.value.trim();
+
+      if (fruitName !== "") {
+        fruits.push(fruitName);
+
+        
+        const li = document.createElement("li");
+        li.textContent = fruitName;
+
+        
+        document.getElementById("fruitList").appendChild(li);
+
+        
+        input.value = "";
+      } else {
+        alert("Please enter a fruit name!");
+      }
+    }
+  </script>
+
+</body>
+</html>
